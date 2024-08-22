@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package Usuario;
+package Compra;
 
 import conexion.conexion;
 import java.sql.Connection;
@@ -21,15 +21,11 @@ public class agregar {
         ResultSet rs;
         
         // Datos agg
-        String nombre_usuario = "Katherinne";
-        String correo = "Fuentes";
-        String telefono = "0000";
-        String dirección = "Salitre";
-        String contraseña = "contraseña";
-        String rol = "admin";
+        String fecha = "10/12/23";
+      
         
         //sentencia 
-        String sql = "INSERT INTO Usuario (nombre_usuario, correo, telefono, dirección, contraseña, rol)values ('"+nombre_usuario+"','"+correo+"','"+telefono+"','"+dirección+"','"+contraseña+"','"+rol+"',)";
+        String sql = "INSERT INTO Compra (fecha)values ('"+fecha+"')";
         
         try {
         Class.forName("com.mysql.cj.jdbc.Driver");
@@ -43,7 +39,7 @@ public class agregar {
             cc = con.getConection();
             sm = cc.createStatement();
             sm.executeUpdate(sql);
-            rs = sm.executeQuery("SELECT * FROM cliente");
+            rs = sm.executeQuery("SELECT * FROM Compra");
             rs.next();
             
             do{

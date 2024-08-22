@@ -1,4 +1,4 @@
-// Hola sena 
+
 package Agenda;
 
 import conexion.conexion;
@@ -18,15 +18,12 @@ public class agregar {
         ResultSet rs;
         
         // Datos agg
-        String nombre_usuario = "Katherinne";
-        String correo = "Fuentes";
-        String telefono = "0000";
-        String dirección = "Salitre";
-        String contraseña = "contraseña";
-        String rol = "admin";
+        String lugar = "Laboratorio Salud y Vida";
+        String fecha = "30/07/2024";
+        String hora = "14:00";
         
         //sentencia 
-        String sql = "INSERT INTO Usuario (nombre_usuario, correo, telefono, dirección, contraseña, rol)values ('"+nombre_usuario+"','"+correo+"','"+telefono+"','"+dirección+"','"+contraseña+"','"+rol+"',)";
+        String sql = "INSERT INTO Agenda (lugar, fecha, hora ('"+lugar+"','"+fecha+"','"+hora+"')";
         
         try {
         Class.forName("com.mysql.cj.jdbc.Driver");
@@ -40,7 +37,7 @@ public class agregar {
             cc = con.getConection();
             sm = cc.createStatement();
             sm.executeUpdate(sql);
-            rs = sm.executeQuery("SELECT * FROM cliente");
+            rs = sm.executeQuery("SELECT * FROM Agenda");
             rs.next();
             
             do{

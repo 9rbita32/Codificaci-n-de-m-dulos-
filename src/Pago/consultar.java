@@ -32,7 +32,7 @@ public class consultar {
             cc = con.getConection();
             sm = cc.createStatement();
             //sm.executeUpdate(sql);
-            rs = sm.executeQuery("SELECT * FROM Usuario");
+            rs = sm.executeQuery("SELECT * FROM Pago");
             rs.next();
             
             do{

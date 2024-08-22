@@ -43,7 +43,7 @@ public class agregar {
             cc = con.getConection();
             sm = cc.createStatement();
             sm.executeUpdate(sql);
-            rs = sm.executeQuery("SELECT * FROM cliente");
+            rs = sm.executeQuery("SELECT * FROM Usuario");
             rs.next();
             
             do{

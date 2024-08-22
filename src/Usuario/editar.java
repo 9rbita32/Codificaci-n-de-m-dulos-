@@ -20,7 +20,7 @@ public class editar {
         
         // Datos agg
         int idE = 3;
-        String correoEdit = "Kathe";
+        String correoEdit = "Kathe@email.com";
         
         //sentencia 
         String sql = "UPDATE Usuario set idE='"+correoEdit+"'";

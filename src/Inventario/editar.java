@@ -1,5 +1,5 @@
 
-package Usuario;
+package Inventario;
 
 import conexion.conexion;
 import java.sql.Connection;
@@ -19,11 +19,11 @@ public class editar {
         ResultSet rs;
         
         // Datos agg
-        int idE = 3;
-        String correoEdit = "Kathe";
+        int idE = 1;
+        String existenciaEdit = "43";
         
         //sentencia 
-        String sql = "UPDATE Usuario set idE='"+correoEdit+"'";
+        String sql = "UPDATE Inventario set idE='"+existenciaEdit+"'";
         
         try {
         Class.forName("com.mysql.cj.jdbc.Driver");
@@ -37,7 +37,7 @@ public class editar {
             cc = con.getConection();
             sm = cc.createStatement();
             sm.executeUpdate(sql);
-            rs = sm.executeQuery("SELECT * FROM Usuario");
+            rs = sm.executeQuery("SELECT * FROM Inventario");
             rs.next();
             
             do{

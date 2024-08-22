@@ -19,11 +19,11 @@ public class editar {
         ResultSet rs;
         
         // Datos agg
-        int idE = 3;
-        String correoEdit = "Kathe";
+        int idE = 2;
+        String fechaEdit = "02/08/24";
         
         //sentencia 
-        String sql = "UPDATE Usuario set idE='"+correoEdit+"'";
+        String sql = "UPDATE Agenda set idE='"+fechaEdit+"'";
         
         try {
         Class.forName("com.mysql.cj.jdbc.Driver");
@@ -37,7 +37,7 @@ public class editar {
             cc = con.getConection();
             sm = cc.createStatement();
             sm.executeUpdate(sql);
-            rs = sm.executeQuery("SELECT * FROM Usuario");
+            rs = sm.executeQuery("SELECT * FROM Agenda");
             rs.next();
             
             do{

@@ -21,15 +21,13 @@ public class agregar {
         ResultSet rs;
         
         // Datos agg
-        String nombre_usuario = "Katherinne";
-        String correo = "Fuentes";
-        String telefono = "0000";
-        String dirección = "Salitre";
-        String contraseña = "contraseña";
-        String rol = "admin";
-        
+        String nombre_test = "Tipo de Sangre";
+        String unit_precio = "45.000";
+        String cantidad_total = "2";
+        String total = "90.000";
+       
         //sentencia 
-        String sql = "INSERT INTO Usuario (nombre_usuario, correo, telefono, dirección, contraseña, rol)values ('"+nombre_usuario+"','"+correo+"','"+telefono+"','"+dirección+"','"+contraseña+"','"+rol+"',)";
+        String sql = "INSERT INTO Carrito_de_compras(nombre_test, unit_precio, cantidad_total, total)values ('"+nombre_test+"','"+unit_precio+"','"+cantidad_total+"','"+total+"')";
         
         try {
         Class.forName("com.mysql.cj.jdbc.Driver");
@@ -43,7 +41,7 @@ public class agregar {
             cc = con.getConection();
             sm = cc.createStatement();
             sm.executeUpdate(sql);
-            rs = sm.executeQuery("SELECT * FROM cliente");
+            rs = sm.executeQuery("SELECT * FROM Carrito_de_compras");
             rs.next();
             
             do{

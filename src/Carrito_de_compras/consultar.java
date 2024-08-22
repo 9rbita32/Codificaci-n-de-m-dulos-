@@ -1,6 +1,6 @@
 
  
-package Usuario;
+package Carrito_de_Compras;
 
 import conexion.conexion;
 import java.sql.Connection;
@@ -32,7 +32,7 @@ public class consultar {
             cc = con.getConection();
             sm = cc.createStatement();
             //sm.executeUpdate(sql);
-            rs = sm.executeQuery("SELECT * FROM Usuario");
+            rs = sm.executeQuery("SELECT * FROM Carrito_de_Compras");
             rs.next();
             
             do{

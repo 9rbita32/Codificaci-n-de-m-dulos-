@@ -18,11 +18,11 @@ public class eliminar {
         ResultSet rs;
         
         // Datos agg
-        int idElim = 3;
+        int idElim = 1;
      
         
         //sentencia 
-        String sql = "DELETE FROM cliete WHERE id="+idElim;
+        String sql = "DELETE FROM Pago WHERE id="+idElim;
         
         try {
         Class.forName("com.mysql.cj.jdbc.Driver");
@@ -36,7 +36,7 @@ public class eliminar {
             cc = con.getConection();
             sm = cc.createStatement();
             sm.executeUpdate(sql);
-            rs = sm.executeQuery("SELECT * FROM cliente");
+            rs = sm.executeQuery("SELECT * FROM Pago");
             rs.next();
             
             do{

@@ -1,5 +1,5 @@
 
-package Usuario;
+package Carrito_de_compras;
 
 import conexion.conexion;
 import java.sql.Connection;
@@ -22,7 +22,7 @@ public class eliminar {
      
         
         //sentencia 
-        String sql = "DELETE FROM cliete WHERE id="+idElim;
+        String sql = "DELETE FROM Carrito_de_comrpas WHERE id="+idElim;
         
         try {
         Class.forName("com.mysql.cj.jdbc.Driver");
@@ -36,7 +36,7 @@ public class eliminar {
             cc = con.getConection();
             sm = cc.createStatement();
             sm.executeUpdate(sql);
-            rs = sm.executeQuery("SELECT * FROM cliente");
+            rs = sm.executeQuery("SELECT * FROM Carrito_de_compras");
             rs.next();
             
             do{

@@ -12,7 +12,6 @@ import java.util.logging.Logger;
 
 
 public class consultar {
-    
     public static void main(String[] args){
         conexion con = new conexion();
         Connection cc;
